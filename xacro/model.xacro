@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rx1">
+
+  <link name="base_link"/>
+
+  <joint name="torso_base_joint" type="fixed">
+    <origin rpy="${-pi/2} 0 ${pi/2}" xyz="-0.08 -0.01 1.0"/>
+    <parent link="base_link"/>
+    <child link="torso_link"/>
+  </joint>
+
+  <xacro:include filename="$(find rx1_arm_description)/xacro/arm_assembly.xacro"/>
+
+</robot>
